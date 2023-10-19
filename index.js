@@ -6,10 +6,6 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const app = express();
 
-app.use(bodyParser.json({ limit: "50mb" }));
-app.use(cors());
-
-
 app.get("/api", (req, res) => {
   res.status(200).json("hello");
 });
